@@ -1,7 +1,7 @@
-FROM nginx  
-WORKDIR /home/
-COPY nginx.conf /etc/nginx/nginx.conf
+FROM nginx:stable
+
 COPY server .
+COPY nginx.conf /etc/nginx/nginx.conf
 
 RUN apt update && \
     apt install -y libfcgi-dev spawn-fcgi && \
@@ -10,4 +10,5 @@ RUN apt update && \
 EXPOSE 81
 
 CMD ["sh", "-c", "spawn-fcgi -p 8080 ./server && nginx -g 'daemon off;'"]
+
 

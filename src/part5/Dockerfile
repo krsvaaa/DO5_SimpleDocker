@@ -2,8 +2,7 @@ FROM nginx
 WORKDIR /home/
 
 COPY ./nginx.conf /etc/nginx/nginx.conf
-COPY ./ server.c .
-COPY ./build.sh .
+COPY ./ server.c ./build.sh .
 USER root
 
 RUN mkdir -p /var/lib/apt/lists/partial && \

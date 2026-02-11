@@ -160,10 +160,6 @@
 
 ![a](img/3.8.jpg)
 
-11. Закидываю nginx по адресу ```./nginx/nginx.conf ```
-
-![a](img/3.9.jpg)
-
 
 ## Part 4. Свой докер
 
@@ -294,7 +290,7 @@ DOCKLE_ACCEPT_KEYS=NGINX_GPGKEYS,NGINX_GPGKEYS,NGINX_GPGKEY_PATH dockle -d etsyh
 
   ![a](img/6.3.jpg)
   
-  4. Собираю докер (```docker compose nuild``` ```docker compose up```). ```docker compose up``` транслирует все процессы при сборке. флаг -d делает сборку тихой
+  4. Собираю докер (```docker compose build``` ```docker compose up```). ```docker compose up``` транслирует все процессы при сборке. флаг -d делает сборку тихой
 
   ![a](img/6.4.jpg)
   
